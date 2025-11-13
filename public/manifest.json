@@ -1,20 +1,21 @@
 {
   "name": "Kib Port",
-  "short_name": "kibpogi",
+  "short_name": "KibPogi",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "background_color": "#000000", 
+  "theme_color": "#000000", 
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "/kibbbbb.jfif",
+      "src": "/kibbbbb-192.png",
       "sizes": "192x192",
-      "type": "image/jpeg"
+      "type": "image/png"
     },
     {
-      "src": "/kibbbbb.jfif",
+      "src": "/kibbbbb-512.png",
       "sizes": "512x512",
-      "type": "image/jpeg"
+      "type": "image/png"
     }
   ]
 }

@@ -17,52 +17,26 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column; /* Stack logo + text */
         background-color: #000000;
         z-index: 9999;
       }
 
       /* Circular logo style, responsive */
       #logo {
-        width: 40vw;
-        max-width: 200px;
+        width: 40vw;          /* 40% of viewport width */
+        max-width: 200px;     /* limit max size on large screens */
         height: auto;
         aspect-ratio: 1/1;
         border-radius: 50%;
         overflow: hidden;
         border: 3px solid #e2e5e2;
         box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        margin-bottom: 20px; /* space for text */
       }
 
       #logo img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-      }
-
-      /* Neon text animation */
-      #neon-text {
-        font-family: 'Arial Black', sans-serif;
-        font-size: 1.8rem;
-        color: #0ff;
-        text-align: center;
-        text-shadow:
-          0 0 5px #0ff,
-          0 0 10px #0ff,
-          0 0 20px #0ff,
-          0 0 40px #0ff,
-          0 0 80px #0ff;
-        animation: flicker 1.5s infinite alternate;
-      }
-
-      @keyframes flicker {
-        0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-          opacity: 1;
-        }
-        20%, 22%, 24%, 55% {
-          opacity: 0.4;
-        }
       }
 
       /* React root stays behind logo */
@@ -73,12 +47,11 @@
     </style>
   </head>
   <body>
-    <!-- Fullscreen logo with neon text -->
+    <!-- Fullscreen logo -->
     <div id="logo-container">
       <div id="logo">
         <img src="/kibbbbb.jfif" alt="App Logo" />
       </div>
-      <div id="neon-text">Welcome</div>
     </div>
 
     <!-- React app -->
