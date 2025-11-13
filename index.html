@@ -7,65 +7,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <style>
-      /* Fullscreen loader */
-      #loader {
+      /* Fullscreen logo container */
+      #logo-container {
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: #ffffff;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
+        background-color: #000000; /* Background behind logo */
         z-index: 9999;
       }
 
-      /* Circular logo container */
-      #loader-logo {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%; /* Makes it a circle */
+      /* Circular logo style */
+      #logo {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%; /* Circle */
         overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 3px solid #333; /* Optional border */
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Optional subtle shadow */
+        border: 3px solid #e3ebe3;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
       }
 
-      /* Logo inside the circle */
-      #loader-logo img {
+      #logo img {
         width: 100%;
         height: 100%;
-        object-fit: cover; /* Keeps it nicely contained */
+        object-fit: cover;
       }
 
-      /* Optional loading text */
-      #loader-text {
-        margin-top: 20px;
-        font-family: Arial, sans-serif;
-        font-size: 1.2rem;
-        color: #333;
-        text-align: center;
+      /* Make React app visible below the logo */
+      #root {
+        position: relative;
+        z-index: 1;
       }
     </style>
   </head>
   <body>
-    <div id="loader">
-      <div id="loader-logo">
-        <img src="/kibbbbb.jfif" alt="Logo" />
+    <!-- Fullscreen logo -->
+    <div id="logo-container">
+      <div id="logo">
+        <img src="/kibbbbb.jfif" alt="App Logo" />
       </div>
-      <div id="loader-text">Loading Portfolio...</div>
     </div>
+
+    <!-- React app -->
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
+
     <script>
-      // Hide loader when React is ready
+      // Hide the fullscreen logo after 3 seconds
       window.addEventListener('load', () => {
-        const loader = document.getElementById('loader');
-        if (loader) loader.style.display = 'none';
+        setTimeout(() => {
+          const logoContainer = document.getElementById('logo-container');
+          if (logoContainer) logoContainer.style.display = 'none';
+        }, 3000); // 3000ms = 3 seconds
       });
     </script>
   </body>
