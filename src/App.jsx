@@ -159,7 +159,7 @@ export default function App() {
       {/* Navigation */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
-          <span className="navbar-brand">My Portfolio</span>
+          <span className="navbar-brand">JK's Portfolio</span>
           <button 
             className="navbar-toggler" 
             type="button" 
